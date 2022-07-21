@@ -1,3 +1,33 @@
+var fake_database =[]
+
+var identif = document.querySelector('#identifiant');
+var Email = document.querySelector('#mail');
+
+var passwd = document.querySelector('#psw');
+
+const sign_up = document.querySelector('.sub');
+
+sign_up.addEventListener('click',(e) => {
+    Sign_Up()
+})
+
+function Sign_Up(){
+   var identifiant = '';
+   var mail ='';
+   var password = '';
+
+   identifiant = identif.value;
+    mail = Email.value;
+    password = passwd.value;
+   fake_database = [...fake_database,
+{
+  identifiant: identifiant,
+  mail: mail ,
+  password: password 
+} 
+]
+console.log(fake_database)
+}
 
 function verif(){
 
@@ -13,3 +43,4 @@ function verif(){
 
 
 }
+
